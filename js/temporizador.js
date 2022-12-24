@@ -6,6 +6,14 @@ let minutos = 0, segundos = 0;
 
 function iniciarTemporizador() {
     tiempoRestanteTemporizador = prompt("Escriba el tiempo inicial (en segundos)");
+
+    
+
+    if(typeof(tiempoRestanteTemporizador) == "string"){
+        alert("Error. No se ingreso un numero valido")
+        return;
+    }
+
     boton.innerHTML="Parar";
 
     segundos = tiempoRestanteTemporizador % 60;
