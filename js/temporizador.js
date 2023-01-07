@@ -5,11 +5,9 @@ let tiempoRestanteTemporizador;
 let minutos = 0, segundos = 0;
 
 function iniciarTemporizador() {
-    tiempoRestanteTemporizador = prompt("Escriba el tiempo inicial (en segundos)");
+    tiempoRestanteTemporizador = parseInt(prompt("Escriba el tiempo inicial (en segundos)"));
 
-    
-
-    if(typeof(tiempoRestanteTemporizador) == "string"){
+    if(isNaN(tiempoRestanteTemporizador)){
         alert("Error. No se ingreso un numero valido")
         return;
     }
